@@ -64,3 +64,11 @@ h2 {
   margin-top: 15px;
   /* align-self: flex-end; */
 }
+
+label {
+  display: block;
+}
+
+button {
+  display: block;
+}

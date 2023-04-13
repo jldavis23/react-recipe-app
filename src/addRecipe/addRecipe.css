@@ -1,0 +1,11 @@
+.add-recipes-wrapper {
+    background-color: pink;
+}
+
+label {
+    display: block;
+}
+
+button {
+    display: block;
+}

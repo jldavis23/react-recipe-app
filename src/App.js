@@ -14,8 +14,6 @@ export default function App() {
   const [allOrFavs, setAllOrFavs] = useState('all')
   const [id, setId] = useState(recipeData.length + 1)
 
-  console.log(recipes)
-
   const enterViewMode = (r) => {
     setRecipeToView(r)
     setViewMode(true)
@@ -33,7 +31,6 @@ export default function App() {
     })
   }
   
-
   return (
     <main>
       {!viewMode ? (

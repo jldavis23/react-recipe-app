@@ -4,7 +4,7 @@ import './addRecipe.css';
 // ADD NEW RECIPE COMPONENT
 export function AddNewRecipe({ recipes, setRecipes }) {
     const [newRecipe, setNewRecipe] = useState({
-        name: '', ingredients: [''], steps: ['']
+        name: '', ingredients: [''], steps: [''], imageURL: '', source: 'user'
     })
 
     const handleSubmit = (e) => {

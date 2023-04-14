@@ -2,12 +2,14 @@ import { useState } from 'react'
 import './addRecipe.css';
 
 // ADD NEW RECIPE COMPONENT
-export function AddNewRecipe({ recipes, setRecipes }) {
-    const [id, setId] = useState(recipes.length + 1)
+export function AddNewRecipe({ recipes, setRecipes, id, setId }) {
+    
 
     const [newRecipe, setNewRecipe] = useState({
         id: id, name: '', ingredients: [''], steps: [''], imageURL: '', source: 'user'
     })
+
+    console.log(id)
 
     const handleSubmit = (e) => {
         e.preventDefault()

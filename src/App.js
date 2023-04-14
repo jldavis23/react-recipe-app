@@ -12,6 +12,9 @@ export default function App() {
   const [viewMode, setViewMode] = useState(false)
   const [recipeToView, setRecipeToView] = useState({})
   const [allOrFavs, setAllOrFavs] = useState('all')
+  const [id, setId] = useState(recipeData.length + 1)
+
+  console.log(recipes)
 
   const enterViewMode = (r) => {
     setRecipeToView(r)
@@ -45,7 +48,7 @@ export default function App() {
             </div>
           </div>
 
-          <AddNewRecipe recipes={recipes} setRecipes={setRecipes} />
+          <AddNewRecipe recipes={recipes} setRecipes={setRecipes} id={id} setId={setId}/>
         </>
 
       ) : (

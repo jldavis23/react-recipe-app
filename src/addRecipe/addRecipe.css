@@ -1,11 +1,20 @@
 .add-recipes-wrapper {
-    background-color: #f5d98b;
+    background-color: #f0d17d;
 }
 
-label {
-    display: block;
+.add-recipes-wrapper h2 {
+    margin-bottom: 20px;
 }
 
-button {
+.add-recipes-wrapper label {
     display: block;
+    padding-bottom: 5px;
 }
+
+.add-recipes-wrapper input {
+    border: none;
+    font-size: 16px;
+    width: 75%;
+    padding: 10px;
+}
+

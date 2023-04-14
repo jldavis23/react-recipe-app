@@ -30,26 +30,33 @@ export default function App() {
       recipeComponents.push(<Recipe recipe={recipe} enterViewMode={enterViewMode} key={recipe.id} />)
     })
   }
-  
+
   return (
     <main>
       {!viewMode ? (
         <>
           <h1><span>Yum</span>Recipes</h1>
-          <div className="section browse-section">
-            <h2>Browse</h2>
-            <button className={allOrFavs === 'all' ? 'btn-active' : 'btn-inactive'} onClick={() => setAllOrFavs('all')}>All</button>
-            <button className={allOrFavs === 'favs' ? 'btn-active' : 'btn-inactive'} onClick={() => setAllOrFavs('favs')}>Favorites</button>
+          <div className="section">
+            <div className="browse-section-header">
+              <h2>Browse</h2>
+
+              <div className="sort-buttons-wrapper">
+                <button className={allOrFavs === 'all' ? 'btn-active' : 'btn-inactive'} onClick={() => setAllOrFavs('all')}>ALL</button>
+                <button className={allOrFavs === 'favs' ? 'btn-active' : 'btn-inactive'} onClick={() => setAllOrFavs('favs')}>FAVORITES</button>
+              </div>
+            </div>
+
+
             <div className="recipes-wrapper">
-              {recipeComponents}
+              {recipeComponents.length > 0 ? recipeComponents : <p>You have no favorite recipes</p>}
             </div>
           </div>
 
-          <AddNewRecipe recipes={recipes} setRecipes={setRecipes} id={id} setId={setId}/>
+          <AddNewRecipe recipes={recipes} setRecipes={setRecipes} id={id} setId={setId} />
         </>
 
       ) : (
-        <ViewRecipe recipeToView={recipeToView} setRecipeToView={setRecipeToView} setViewMode={setViewMode} recipes={recipes} setRecipes={setRecipes}/>
+        <ViewRecipe recipeToView={recipeToView} setRecipeToView={setRecipeToView} setViewMode={setViewMode} recipes={recipes} setRecipes={setRecipes} />
       )
       }
 

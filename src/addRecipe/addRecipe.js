@@ -43,22 +43,22 @@ export function AddNewRecipe({ recipes, setRecipes, id, setId }) {
             <div className="section add-recipes-section">
                 <h2>Add a Recipe</h2>
 
-                <form className="cheese" onSubmit={handleSubmit}>
-                    <label>
-                        Recipe Name: <br></br>
-                        <input type="text" value={newRecipe.name} onChange={(e) => { setNewRecipe({ ...newRecipe, name: e.target.value }) }}></input>
-                    </label>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label>Recipe Name:</label>
+                        <input type="text" className="input-group" value={newRecipe.name} onChange={(e) => { setNewRecipe({ ...newRecipe, name: e.target.value }) }}></input>
+                    </div>
 
                     <label>Ingredients: </label>
                     {ingredientInputs}
-                    <button type="button" onClick={addIngredient}>Add Ingredient</button>
+                    <button type="button" onClick={addIngredient} className='add-button'>+ Ingredient</button>
 
                     <label>Steps: </label>
                     {stepInputs}
-                    <button type="button" onClick={addStep}>Add Step</button>
+                    <button type="button" onClick={addStep} className='add-button'>+ Step</button>
 
 
-                    <button type="submit">Add Recipe</button>
+                    <button type="submit" className="submit-button">ADD RECIPE</button>
                 </form>
             </div>
         </div>
@@ -80,10 +80,10 @@ function Ingredient({ newRecipe, setNewRecipe, index }) {
     }
 
     return (
-        <>
+        <div className="input-group">
             <input type="text" value={newRecipe.ingredients[index]} onChange={handleChange}></input>
-            <button type="button" onClick={deleteIngredient}>remove</button>
-        </>
+            <button type="button" className="remove-button" onClick={deleteIngredient}>remove</button>
+        </div>
 
     )
 }
@@ -102,13 +102,10 @@ function Step({ newRecipe, setNewRecipe, index }) {
     }
 
     return (
-        <>
-            <div>
-                <span>{index + 1}.</span>
-                <input type="text" value={newRecipe.steps[index]} onChange={handleChange}></input>
-            </div>
-            <button type="button" onClick={deleteStep}>remove</button>
-        </>
+        <div className="input-group">
+            <input type="text" value={newRecipe.steps[index]} onChange={handleChange}></input>
+            <button type="button" className="remove-button" onClick={deleteStep}>remove</button>
+        </div>
 
     )
 }

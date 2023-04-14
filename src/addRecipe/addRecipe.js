@@ -3,8 +3,10 @@ import './addRecipe.css';
 
 // ADD NEW RECIPE COMPONENT
 export function AddNewRecipe({ recipes, setRecipes }) {
+    const [id, setId] = useState(recipes.length + 1)
+
     const [newRecipe, setNewRecipe] = useState({
-        name: '', ingredients: [''], steps: [''], imageURL: '', source: 'user'
+        id: id, name: '', ingredients: [''], steps: [''], imageURL: '', source: 'user'
     })
 
     const handleSubmit = (e) => {
@@ -12,8 +14,9 @@ export function AddNewRecipe({ recipes, setRecipes }) {
         //console.log(newRecipe)
         setRecipes([...recipes, newRecipe])
         setNewRecipe({
-            name: '', ingredients: [''], steps: ['']
+            id: id + 1, name: '', ingredients: [''], steps: [''], imageURL: '', source: 'user'
         })
+        setId(id + 1)
     }
 
     let ingredientInputs = []
@@ -53,8 +56,8 @@ export function AddNewRecipe({ recipes, setRecipes }) {
                     <button type="button" onClick={addIngredient}>Add Ingredient</button>
 
                     <label>Steps: </label>
-                    <button type="button" onClick={addStep}>Add Step</button>
                     {stepInputs}
+                    <button type="button" onClick={addStep}>Add Step</button>
 
 
                     <button type="submit">Add Recipe</button>

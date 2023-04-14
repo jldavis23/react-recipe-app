@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Spaghetti Bolognese",
         "steps": [
             "Put the onion and oil in a large pan and fry over a fairly high heat for 3-4 mins.",
@@ -23,9 +24,11 @@
             "parmesan"
         ],
         "imageURL": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
-        "source": "MealDB"
+        "source": "MealDB",
+        "isFavorite": false
     },
     {
+        "id": 2,
         "name": "Spicy Arrabiata Penne",
         "steps": [
             "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.",
@@ -43,9 +46,11 @@
             "sprinkling of Parmigiano-Reggiano"
         ],
         "imageURL": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
-        "source": "MealDB"
+        "source": "MealDB",
+        "isFavorite": false
     },
     {
+        "id": 3,
         "name": "Apple Frangipan Tart",
         "steps": [
             "Preheat the oven to 200C/180C Fan/Gas 6. Put the biscuits in a large re-sealable freezer bag and bash with a rolling pin into fine crumbs. Melt the butter in a small pan, then add the biscuit crumbs and stir until coated with butter. Tip into the tart tin and, using the back of a spoon, press over the base and sides of the tin to give an even layer. Chill in the fridge while you make the filling.",
@@ -65,9 +70,11 @@
             "1 3/4oz flaked almonds"
         ],
         "imageURL": "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg",
-        "source": "MealDB"
+        "source": "MealDB",
+        "isFavorite": false
     },
     {
+        "id": 4,
         "name": "Avocado Toast",
         "steps": [
             "Mash the avocado with a fork in a shallow bowl until chunky. Season with fine salt and black pepper.", "Toast the bread until browned and crisp.", "Lightly rub 1 side of each slice with the cut side of the garlic until fragrant; discard the garlic.", "Lightly brush the toasts with oil, and season with fine salt and pepper.", "Divide the mashed avocado evenly among the toasts, and top with more flaky sea salt, more black pepper and red pepper flakes if using."
@@ -81,9 +88,11 @@
             "2 Tbs extra-virgin olive oil"
         ],
         "imageURL": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/12/11/0/FNK_All-the-Avocado-Toast_s4x3.jpg.rend.hgtvcom.826.620.suffix/1450059496131.jpeg",
-        "source": "Food Network"
+        "source": "Food Network",
+        "isFavorite": false
     },
     {
+        "id": 5,
         "name": "Blueberry French Toast",
         "steps": ["Cut bread into 1-in. cubes; place half in a greased 13x9-in. baking dish. Cut cream cheese into 1-in. cubes; place over bread. Top with blueberries and remaining bread cubes.", "Whisk the eggs, milk and syrup in a large bowl. Pour over bread mixture. Cover and refrigerate for 8 hours or overnight.", "Remove from the refrigerator 30 minutes before baking. Cover and bake at 350° for 30 minutes. Uncover; bake 25-30 minutes longer or until a knife inserted in center comes out clean.", "Combine the sugar, water and cornstarch until smooth in a small saucepan. Bring to a boil over medium heat; cook and stir until thickened, 3 minutes. Stir in blueberries; bring to a boil. Reduce heat and simmer until berries burst, 8-10 minutes. Remove from heat; stir in butter. Serve with French toast."],
         "ingredients": [
@@ -95,9 +104,11 @@
             "1/3 cup maple syrup or honey"
         ],
         "imageURL": "https://www.tasteofhome.com/wp-content/uploads/2018/01/exps165070_SD2401791C10_19_2b_WEB-5.jpg?fit=700,1024",
-        "source": "Taste of Home"
+        "source": "Taste of Home",
+        "isFavorite": false
     },
     {
+        "id": 6,
         "name": "Grilled Cheese",
         "steps": ["Preheat skillet over medium heat. Generously butter one side of a slice of bread. Place bread butter-side-down onto skillet bottom and add 1 slice of cheese. Butter a second slice of bread on one side and place butter-side-up on top of sandwich. Grill until lightly browned and flip over; continue grilling until cheese is melted.", "Repeat with remaining 2 slices of bread, butter and slice of cheese."],
         "ingredients": [
@@ -106,9 +117,11 @@
             "3 Tbsp butter"
         ],
         "imageURL": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8125959.jpg&q=60&c=sc&orient=true&poi=auto&h=512",
-        "source": "All Recipes.com"
+        "source": "All Recipes.com",
+        "isFavorite": false
     },
     {
+        "id": 7,
         "name": "BLT Sandwich",
         "steps": ["Cook the bacon in a large, deep skillet over medium-high heat until evenly browned, about 10 minutes. Drain the bacon slices on a paper towel-lined plate.", "Arrange the cooked bacon, lettuce, and tomato slices on one slice of bread. Spread one side of remaining bread slice with the mayonnaise. Bring the two pieces together to make a sandwich."],
         "ingredients": [
@@ -119,9 +132,11 @@
             "2 slices tomato"
         ],
         "imageURL": "https://www.allrecipes.com/thmb/b3RSf3lzG_u3Vbc9tq_T8J8uRg4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/4543157-e47cd201c0e34de0b63c70f62ccbe2ce.jpg",
-        "source": "All Recipes.com"
+        "source": "All Recipes.com",
+        "isFavorite": false
     },
     {
+        "id": 8,
         "name": "Chocolate Chip Cookies",
         "steps": ["Preheat oven to 350 degrees F (175 degrees C).", "Cream together the butter, white sugar, and brown sugar until smooth. Beat in the eggs one at a time, then stir in the vanilla. Dissolve baking soda in hot water. Add to batter along with salt. Stir in flour, chocolate chips, and nuts. Drop by large spoonfuls onto ungreased pans.", "Bake for about 10 minutes in the preheated oven, or until edges are nicely browned."],
         "ingredients": [
@@ -136,9 +151,11 @@
             "1 cup chopped walnuts"
         ],
         "imageURL": "https://images.unsplash.com/photo-1625876981820-be17a6807189?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
-        "source": "All Recipes.com"
+        "source": "All Recipes.com",
+        "isFavorite": false
     },
     {
+        "id": 9,
         "name": "Caesar Salad",
         "steps": ["In a medium bowl, whisk together the egg yolk, lemon juice, garlic, Worcestershire, pepper flakes, mustard, and anchovies. Slowly whisk in the oils to emulsify. Season, to taste, with salt and pepper.", "Place the lettuce in a large bowl. Sprinkle with Parmesan and black pepper. Drizzle with desired amount of dressing and toss well. Sprinkle top with croutons."],
         "ingredients": [
@@ -157,9 +174,11 @@
             "2 cups croutons"
         ],
         "imageURL": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/12/20/0/FNK_Caesar-Salad_H_s4x3.jpg.rend.hgtvcom.826.620.suffix/1576855535377.jpeg",
-        "source": "Food Network"
+        "source": "Food Network",
+        "isFavorite": false
     },
     {
+        "id": 10,
         "name": "Clam chowder",
         "steps": ["Rinse the clams in several changes of cold water and drain well. Tip the clams into a large pan with 500ml of water. Cover, bring to the boil and simmer for 2 mins until the clams have just opened. Tip the contents of the pan into a colander over a bowl to catch the clam stock. When cool enough to handle, remove the clams from their shells - reserving a handful of empty shells for presentation if you want. Strain the clam stock into a jug, leaving any grit in the bottom of the bowl. You should have around 800ml stock.", "Heat the butter in the same pan and sizzle the bacon for 3-4 mins until it starts to brown. Stir in the onion, thyme and bay and cook everything gently for 10 mins until the onion is soft and golden.", "Scatter over the flour and stir in to make a sandy paste, cook for 2 mins more, then gradually stir in the clam stock then the milk and the cream.", "Throw in the potatoes, bring everything to a simmer and leave to bubble away gently for 10 mins or until the potatoes are cooked. Use a fork to crush a few of the potato chunks against the side of the pan to help thicken - you still want lots of defined chunks though.", "Stir through the clam meat and the few clam shells, if you've gone down that route, and simmer for a minute to reheat. Season with plenty of black pepper and a little salt, if needed, then stir through the parsley just before ladling into bowls or hollowed-out crusty rolls."],
         "imageURL": "https://www.themealdb.com/images/media/meals/rvtvuw1511190488.jpg",
@@ -176,6 +195,7 @@
             "2 medium Potatoes",
             "Chopped Parsley"
         ],
-        "source": "MealDB"
+        "source": "MealDB",
+        "isFavorite": false
     }
 ]

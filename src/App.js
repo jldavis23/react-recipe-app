@@ -5,13 +5,12 @@ import { AddNewRecipe } from './addRecipe/addRecipe.js'
 import { ViewRecipe } from './viewRecipe/viewRecipe.js'
 
 
-let id = 1
+//let id = 1
 
 export default function App() {
   const [recipes, setRecipes] = useState(recipeData)
   const [viewMode, setViewMode] = useState(false)
   const [recipeToView, setRecipeToView] = useState({})
-  //console.log(recipes)
 
   const enterViewMode = (r) => {
     setRecipeToView(r)
@@ -20,7 +19,7 @@ export default function App() {
 
   let recipeComponents = []
   recipes.forEach(recipe => {
-    recipeComponents.push(<Recipe recipe={recipe} enterViewMode={enterViewMode} key={id++} />)
+    recipeComponents.push(<Recipe recipe={recipe} enterViewMode={enterViewMode} key={recipe.id} />)
   })
 
   return (
@@ -39,7 +38,7 @@ export default function App() {
         </>
 
       ) : (
-        <ViewRecipe recipe={recipeToView} setViewMode={setViewMode} />
+        <ViewRecipe recipeToView={recipeToView} setRecipeToView={setRecipeToView} setViewMode={setViewMode} recipes={recipes} setRecipes={setRecipes}/>
       )
       }
 

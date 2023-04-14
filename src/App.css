@@ -26,6 +26,10 @@ h2 {
   padding: 20px 0;
 }
 
+.btn-active {
+  background-color: pink;
+}
+
 .recipes-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;

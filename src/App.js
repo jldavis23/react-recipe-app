@@ -11,6 +11,7 @@ export default function App() {
   const [recipes, setRecipes] = useState(recipeData)
   const [viewMode, setViewMode] = useState(false)
   const [recipeToView, setRecipeToView] = useState({})
+  const [allOrFavs, setAllOrFavs] = useState('all')
 
   const enterViewMode = (r) => {
     setRecipeToView(r)
@@ -18,9 +19,17 @@ export default function App() {
   }
 
   let recipeComponents = []
-  recipes.forEach(recipe => {
-    recipeComponents.push(<Recipe recipe={recipe} enterViewMode={enterViewMode} key={recipe.id} />)
-  })
+  if (allOrFavs === 'all') {
+    recipes.forEach(recipe => {
+      recipeComponents.push(<Recipe recipe={recipe} enterViewMode={enterViewMode} key={recipe.id} />)
+    })
+  } else {
+    let favRecipes = recipes.filter(recipe => recipe.isFavorite === true)
+    favRecipes.forEach(recipe => {
+      recipeComponents.push(<Recipe recipe={recipe} enterViewMode={enterViewMode} key={recipe.id} />)
+    })
+  }
+  
 
   return (
     <main>
@@ -29,6 +38,8 @@ export default function App() {
           <h1><span>Yum</span>Recipes</h1>
           <div className="section browse-section">
             <h2>Browse</h2>
+            <button className={allOrFavs === 'all' ? 'btn-active' : 'btn-inactive'} onClick={() => setAllOrFavs('all')}>All</button>
+            <button className={allOrFavs === 'favs' ? 'btn-active' : 'btn-inactive'} onClick={() => setAllOrFavs('favs')}>Favorites</button>
             <div className="recipes-wrapper">
               {recipeComponents}
             </div>

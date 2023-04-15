@@ -46,7 +46,7 @@ export function AddNewRecipe({ recipes, setRecipes, id, setId }) {
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Recipe Name:</label>
-                        <input type="text" className="input-group" value={newRecipe.name} onChange={(e) => { setNewRecipe({ ...newRecipe, name: e.target.value }) }}></input>
+                        <input required type="text" className="input-group" value={newRecipe.name} onChange={(e) => { setNewRecipe({ ...newRecipe, name: e.target.value }) }}></input>
                     </div>
 
                     <label>Ingredients: </label>
@@ -81,7 +81,7 @@ function Ingredient({ newRecipe, setNewRecipe, index }) {
 
     return (
         <div className="input-group">
-            <input type="text" value={newRecipe.ingredients[index]} onChange={handleChange}></input>
+            <input type="text" required value={newRecipe.ingredients[index]} onChange={handleChange}></input>
             <button type="button" className="remove-button" onClick={deleteIngredient}>remove</button>
         </div>
 
@@ -103,7 +103,7 @@ function Step({ newRecipe, setNewRecipe, index }) {
 
     return (
         <div className="input-group">
-            <input type="text" value={newRecipe.steps[index]} onChange={handleChange}></input>
+            <input type="text" required value={newRecipe.steps[index]} onChange={handleChange}></input>
             <button type="button" className="remove-button" onClick={deleteStep}>remove</button>
         </div>
 

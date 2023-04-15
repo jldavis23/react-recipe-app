@@ -42,6 +42,7 @@ export function ViewRecipe({ recipeToView, setRecipeToView, setViewMode, recipes
         const updatedRecipes = recipes.filter(recipe => recipe.id !== recipeToView.id)
         setRecipes(updatedRecipes)
         setViewMode(false)
+        window.scrollTo(0, 0);
     }
 
     const toggleEditMode = () => {
@@ -59,46 +60,64 @@ export function ViewRecipe({ recipeToView, setRecipeToView, setViewMode, recipes
     return (
         <div className="view-recipe">
             <div className="cover">
-                <button className="back-button" onClick={() => setViewMode(false)}>back</button>
+                <button className="back-button" onClick={() => setViewMode(false)}>↩</button>
                 <img src={recipeToView.imageURL} alt={recipeToView.name}></img>
             </div>
 
-            <div className="section">
+            <div className="recipe-details">
                 {!editMode ? (
                     <>
                         <h1>{recipeToView.name}</h1>
                         <p>Source: {recipeToView.source}</p>
-                        <h2>Ingredients</h2>
-                        <ul>
-                            {ingredients}
-                        </ul>
-                        <h2>Steps</h2>
-                        <ol>
-                            {steps}
-                        </ol>
+
+                        <button className="submit-button" onClick={addOrRemoveFavorite}>{recipeToView.isFavorite ? 'remove from ' : 'add to '}favorites</button>
+
+                        <div className="recipe-details-section">
+                            <h2>Ingredients</h2>
+                            <ul>
+                                {ingredients}
+                            </ul>
+                        </div>
+
+                        <div className="recipe-details-section">
+                            <h2>Steps</h2>
+                            <ol>
+                                {steps}
+                            </ol>
+                        </div>
                     </>
 
                 ) : (
                     <>
-                        <input type="text" value={recipeToView.name} onChange={(e) => setRecipeToView({...recipeToView, name: e.target.value})}></input>
-                        <input type="text" value={recipeToView.source} onChange={(e) => setRecipeToView({...recipeToView, source: e.target.value})}></input>
-                        <h2>Ingredients</h2>
-                        <ul>
-                            {ingredients}
-                        </ul>
-                        <button onClick={addIngredient}>add Ingredient</button>
-                        <h2>Steps</h2>
-                        <ol>
-                            {steps}
-                        </ol>
-                        <button onClick={addStep}>add Ingredient</button>
+                        <label>Recipe Name</label>
+                        <input type="text" className="input-group" value={recipeToView.name} onChange={(e) => setRecipeToView({ ...recipeToView, name: e.target.value })}></input>
+
+                        <label>Recipe Source</label>
+                        <input type="text" className="input-group" value={recipeToView.source} onChange={(e) => setRecipeToView({ ...recipeToView, source: e.target.value })}></input>
+
+                        <div className="recipe-details-section">
+                            <h2>Ingredients</h2>
+                            <ul>
+                                {ingredients}
+                            </ul>
+                            <button className="add-button" onClick={addIngredient}>+ Ingredient</button>
+                        </div>
+
+                        <div className="recipe-details-section">
+                            <h2>Steps</h2>
+                            <ol>
+                                {steps}
+                            </ol>
+                            <button className="add-button" onClick={addStep}>+ Step</button>
+                        </div>
                     </>
                 )}
 
 
-                <button onClick={toggleEditMode}>{editMode ? 'save' : 'edit'}</button>
-                <button onClick={deleteRecipe}>delete</button>
-                <button onClick={addOrRemoveFavorite}>{recipeToView.isFavorite ? 'remove from ' : 'add to '}favorites</button>
+                <div className="action-buttons">
+                    <button className="submit-button" onClick={toggleEditMode}>{editMode ? 'SAVE' : 'EDIT'}</button>
+                    <button className="submit-button" onClick={deleteRecipe}>DELETE</button>
+                </div>
             </div>
 
         </div>
@@ -122,10 +141,10 @@ function Ingredient({ ingredient, editMode, recipeToView, setRecipeToView, id })
             {!editMode ? (
                 <li>{ingredient}</li>
             ) : (
-                <>
+                <div class="input-group">
                     <input value={ingredient} onChange={handleChange}></input>
-                    <button onClick={deleteIngredient}>remove</button>
-                </>
+                    <button className="remove-button" onClick={deleteIngredient}>remove</button>
+                </div>
             )}
         </>
     )
@@ -148,10 +167,10 @@ function Step({ step, editMode, recipeToView, setRecipeToView, id }) {
             {!editMode ? (
                 <li>{step}</li>
             ) : (
-                <>
+                <div class="input-group">
                     <input value={step} onChange={handleChange}></input>
-                    <button onClick={deleteStep}>remove</button>
-                </>
+                    <button className="remove-button" onClick={deleteStep}>remove</button>
+                </div>
             )}
         </>
     )

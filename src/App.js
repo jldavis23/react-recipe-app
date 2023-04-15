@@ -17,6 +17,7 @@ export default function App() {
   const enterViewMode = (r) => {
     setRecipeToView(r)
     setViewMode(true)
+    window.scrollTo(0, 0);
   }
 
   let recipeComponents = []

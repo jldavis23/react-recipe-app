@@ -3,7 +3,7 @@ main {
 }
 
 .section {
-  padding: 35px 35px;
+  padding: 35px 35px 60px 35px;
   max-width: 800px;
   margin: auto;
 }
@@ -18,7 +18,7 @@ button:hover {
 
 h1 {
   font-weight: 600;
-  margin: 20px 0;
+  margin: 40px 0;
   color: #f4a389;
   text-align: center;
 }
@@ -143,12 +143,13 @@ h2 {
 }
 
 .remove-button {
-  border: none;
+  border: 1px solid #b2b2b2;
+  border-left: none;
   padding: 5px;
 }
 
 .add-button {
-  border: none;
+  border: 1px solid #b2b2b2;
   padding: 5px;
   margin-bottom: 15px;
 }
@@ -157,7 +158,6 @@ h2 {
   border: none;
   padding: 10px;
   font-size: 16px;
-  background-color: #ba9168;
-  color: #fff;
+  background-color: #f5e2da;
   border-radius: 5px;
 }

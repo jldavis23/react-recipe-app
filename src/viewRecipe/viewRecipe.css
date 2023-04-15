@@ -1,3 +1,8 @@
+.view-recipe {
+    max-width: 800px;
+    margin: auto;
+}
+
 .cover {
     position: relative;
     margin: 3px;
@@ -12,5 +17,53 @@
 
 .back-button {
     position: absolute;
-    /* margin: 10px; */
+    margin: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f5e2da;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.recipe-details {
+    padding: 20px 35px;
+}
+
+.recipe-details h1 {
+    text-align: left;
+    margin: 0;
+}
+
+.recipe-details p {
+    font-style: italic;
+    color: grey;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.recipe-details-section {
+    margin: 35px 0;
+}
+
+.recipe-details-section h2 {
+    margin: 10px 0;
+}
+
+.recipe-details-section li {
+    margin: 8px 15px;
+    color: #676767;
+}
+
+.recipe-details input {
+    border-radius: 0;
+    border: 1px solid #b2b2b2;
+    font-size: 16px;
+    width: 75%;
+    padding: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
 }
